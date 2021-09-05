@@ -35,24 +35,18 @@ Here are some specs of my Chip-8 implementation:
 - 60Hz playback rate
 
 ## Installing / Building
-> You'll need `git` and `cargo` in your machine.
->
-> If you're a Windows user, you might want to fix the rom path with a backslash.
+> You'll need `cargo` and `libsdl2-dev` to build rusty-8.
 
 ```bash
-git clone https://github.com/gabrielvictorcf/rusty-8.git
-cd rusty-8
-cargo run --release -- roms/<rom_of_your_choice> # This should open the window with the emulator!
+cargo install --branch main --git https://github.com/gabrielvictorcf/rusty-8 rusty-8
 ```
 
-## Running
+## Usage
+You can `git clone https://github.com/gabrielvictorcf/rusty-8.git` to get the roms, or just
+go to `roms` and download them individually. Then, all that's left is to:
+
 ```bash
-# Assuming you're on /rusty-8
-cargo run --release -- roms/<rom_of_your_choice> # You can run with cargo
-
-# OR
-
-./target/release/rusty_8 <rom_path> # Or call the binary directly
+rusty-8 <rom_path> # opens the emulator and executes given rom!
 ```
 
 Some games might be buggy - this is unrelated to the emulator itself, and depends more on
